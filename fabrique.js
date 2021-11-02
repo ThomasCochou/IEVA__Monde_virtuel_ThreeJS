@@ -30,6 +30,7 @@ Fabrique.prototype.genese = function(){
     const a0 = new AGENTS.agent("a0", {},sim) ; 
     a0.incarnation(PRIMS3D.soleil,{});
 
+    // QUESTION 1
     // const a1  = new AGENTS.agentDyn("a1",{vMax:4.0}, sim);  
     // a1.incarnation(PRIMS3D.obj,{}) ; 
     // a1.placementEn(2,0,5) ; 
@@ -38,14 +39,25 @@ Fabrique.prototype.genese = function(){
     // sim.ajoutPerceptible(a1) ;
     // sim.ajoutAgent(a1) ; 
 
-    const a2  = new AGENTS.agentDyn("a2",{vMax:4.0}, sim);  
-    a2.incarnation(PRIMS3D.obj,{}) ; 
-    a2.placementEn(3,0,5) ; 
-    a2.ajoutComposant(COMPS.compAlea,{vMax:1.0}) ; 
-    a2.ajoutComposant(COMPS.compCapteur360,{horizon:2}) ;  
-    sim.ajoutPerceptible(a2) ;
-    sim.ajoutAgent(a2) ; 	
+    // QUESTION 2
+    // const a2  = new AGENTS.agentDyn("a2",{vMax:4.0}, sim);  
+    // a2.incarnation(PRIMS3D.obj,{}) ; 
+    // a2.placementEn(3,0,5) ; 
+    // a2.ajoutComposant(COMPS.compAlea,{vMax:1.0}) ; 
+    // a2.ajoutComposant(COMPS.compCapteur360,{horizon:3}) ;
+    // a2.ajoutComposant(COMPS.compArrive,{}) ; 
+    // sim.ajoutPerceptible(a2) ;
+    // sim.ajoutAgent(a2) ; 	
 
+    // QUESTION 3
+    const a3  = new AGENTS.agentDyn("a3",{vMax:4.0}, sim);  
+    a3.incarnation(PRIMS3D.obj,{}) ; 
+    a3.placementEn(3,0,5) ; 
+    a3.ajoutComposant(COMPS.compAlea,{vMax:1.0}) ; 
+    a3.ajoutComposant(COMPS.compConeVision,{horizon:4, angle:90}) ;
+    a3.ajoutComposant(COMPS.compArrive,{}) ; 
+    sim.ajoutPerceptible(a3) ;
+    sim.ajoutAgent(a3) ; 
 
     // const a1  = new AGENTS.agent("a1", {}, sim) ;  
     // a1.incarnation(PRIMS3D.obj,{}) ; 
